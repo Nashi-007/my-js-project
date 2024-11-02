@@ -11,7 +11,7 @@
     border-radius: 15px;
 }
 .atmdisplay{
-width: 40%;
+width: 80%;
 border-radius: 5px;
 padding: 1%;
 }
@@ -70,7 +70,12 @@ padding: 1%;
 }
 
 @media screen and (max-width:576px) {
-    .m{
-       height: 100vh ;
+    .atmbody{
+        border-radius: 0px;
+        margin-top: 25%;
+        box-shadow: 1px 1px 8px 4px black;
     }
+    /* body{
+        background-color: rgb(87, 83, 83);
+    } */
 }
