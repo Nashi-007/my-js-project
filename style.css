@@ -72,9 +72,40 @@ padding: 1%;
 @media screen and (max-width:576px) {
     .atmbody{
         border-radius: 0px;
-        margin-top: 25%;
         box-shadow: 1px 1px 8px 4px black;
+        height: 100vh;
     }
+    .atmtext{
+        margin-top: 5%;
+    }
+    .atmdisplay{
+        margin-top: 5%;
+        width: 90%;
+        height: 14%;
+    }
+    #buttons{
+        margin-top: 5%;
+    }
+    .atmdeposit{
+        width: 45%;
+        padding: 2%;
+    }
+    .atmwith{
+        width: 45%;
+        padding: 2%;
+    }
+    .atmbalance{
+        width: 45%;
+        padding: 2%;
+    }
+    .atmquit{
+        width: 45%;
+        padding: 2%;
+    }
+    .atmok{
+        margin-top: 3%;
+    }
+   
     /* body{
         background-color: rgb(87, 83, 83);
     } */
