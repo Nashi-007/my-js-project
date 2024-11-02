@@ -42,23 +42,29 @@ function quit() {
 function ok() {
     if (value === 1) {
         var b1 = document.getElementById("d2").value;
-        b = parseInt(b1, 10)
-        m = m + b;
-        var ok = document.getElementById("ok");
-        ok.style.display = "none";
-        var d = document.getElementById("d2");
-        d.style.display = "none";
-        document.getElementById("d1").innerText = "TRANSACTION SUCCESSFUL"
-        document.getElementById("d2").value = ""
-        setTimeout(function () {
-            document.getElementById("d1").classList.add('fade');
+        if(b1!=""){
+            b = parseInt(b1, 10)
+            m = m + b;
+            var ok = document.getElementById("ok");
+            ok.style.display = "none";
+            var d = document.getElementById("d2");
+            d.style.display = "none";
+            document.getElementById("d1").innerText = "TRANSACTION SUCCESSFUL"
+            document.getElementById("d2").value = ""
             setTimeout(function () {
-                document.getElementById("d1").classList.remove('fade');
-                document.getElementById("d1").innerText = "ENTER YOUR ACTION"
-                var bt = document.getElementById("buttons");
-        bt.style.display = "block";
-            },1000);
-        }, 1000);
+                document.getElementById("d1").classList.add('fade');
+                setTimeout(function () {
+                    document.getElementById("d1").classList.remove('fade');
+                    document.getElementById("d1").innerText = "ENTER YOUR ACTION"
+                    var bt = document.getElementById("buttons");
+            bt.style.display = "block";
+                },1000);
+            }, 1000);
+        }
+        else{
+            document.getElementById("d1").innerText = "ENTER THE AMOUNT"
+        }
+       
     }
     else if (value === 2) {
         var b1 = document.getElementById("d2").value;
@@ -81,6 +87,9 @@ function ok() {
                     document.getElementById("d1").innerText = "ENTER YOUR ACTION"
                 },1000);
             }, 1000);
+        }
+        else if(b1==""){
+            document.getElementById("d1").innerText = "ENTER A AMOUNT";
         }
         else {
             document.getElementById("d1").innerText = "INSUFFICENT BALANCE";
